@@ -37,16 +37,9 @@ This repository contains data‐pull and analysis scripts for “Scarce Attentio
 
 - **`logit_stacked_did.py`** (Section 6.2)  
   Estimates the core stacked logit across all nine markets (energy + 8 ancillary services).  
-  Key regressors: 
-  - \(\ln\lvert\text{FE}_{m}\rvert\),  
-  - 30-day revenue share in market \(m\),  
-  - \(\ln\lvert\text{FE}_{m}\rvert\times\text{Share}_{30,m}\),  
-  - \(\ln(\text{Capacity})\),  
-  - Market dummies and their interactions with FE and Share,  
-  - Hour-of-day fixed effects.  
 
 - **`logit_stacked_volatility.py`** (Section 6.3)  
   Builds on `logit_stacked_did.py` by adding:
-  - A rolling 24-hour realised volatility (\(\sigma_{m,t}\)) for each market.  
-  - \(\ln\sigma_{m,t}\) and its interactions with revenue share and \(\ln\lvert\text{FE}\rvert\).  
+  - A rolling 24-hour realised volatility for each market.  
+  - lnVolatility and its interactions with revenue share and ln|FE|.  
   Produces the volatility-augmented coefficients reported in Section 6.3.
