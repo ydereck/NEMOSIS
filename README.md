@@ -29,7 +29,7 @@ This repository contains data‐pull and analysis scripts for “Scarce Attentio
 - **`logit_diff_in_diff.py`** (Section 6.1)  
   Runs a simple logit on the energy market only.  
   - Binary outcome: did a unit revise any energy price band two intervals after a PD-5 forecast?  
-  - Regressors: \(\ln\lvert\text{FE}\rvert\), a battery dummy, \(\ln\lvert\text{FE}\rvert\times\text{Battery}\), and \(\ln(\text{Capacity})\).  
+  - Regressors: ln|Forecast Error|, a battery dummy, interaction term, and lnCapacity.  
 
 - **`logit_signed_did.py`** (Section 6.1, robustness)  
   Implements the same energy-only logit after trimming the top 1 % of \(\lvert\text{FE}\rvert\).  
